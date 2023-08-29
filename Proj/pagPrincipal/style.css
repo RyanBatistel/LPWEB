@@ -1,0 +1,54 @@
+html{
+    background-color: black;
+}
+.corpo ,.menu, .categorias, p{
+    margin:6px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+    color: rgb(3, 3, 3);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.titulo{
+    text-align: left;
+    color: white;
+}
+
+.header {
+    background: rgb(38, 0, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;/*Alinha os menus com a logo */
+    align-items: center;
+    padding: 20px;/*direciona a logo para abaixo*/
+}
+.menu {
+    display: flex;
+    /*!background-color: rgb(251, 255, 0);*/
+}
+.menu .categorias {
+    margin-left: 10px;
+}
+.menu .categorias a {
+    display: block;
+    padding: 10px;
+    /*background-color: green;*/
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 230px;
+    margin: 0 auto;
+    grid-gap: 20px;
+    background-color: aqua;
+}
+
+.grid div {
+    height: 210.2px;
+    width: 100%;
+}
