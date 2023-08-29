@@ -26,6 +26,7 @@ a{
     justify-content:space-between;/*Alinha os menus com a logo */
     align-items: center;
     padding: 20px;/*direciona a logo para abaixo*/
+    border:solid black 5px ;
 }
 .menu {
     display: flex;
@@ -46,6 +47,7 @@ a{
     margin: 0 auto;
     grid-gap: 20px;
     background-color: aqua;
+    border:solid black 5px ;
 }
 
 .grid div {
