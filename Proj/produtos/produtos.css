@@ -2,23 +2,24 @@
   box-sizing: border-box;
 }
 
-.corpo,
-html {
+#corpo,
+#html {
   height: 100%;
   margin: 0 auto;
   color: white;
   font-family: Arial;
-  background-color: #201f1f49;
+  background-color: black;
 }
 
-.center {
+#grid {
   margin: auto;
   text-align: center;
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: gray;
   padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  border: 10px solid white;
+  border-radius: 3px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,7 +27,12 @@ html {
   transform: translate(-50%, -50%);
 }
 
-.voltar a {
+#grid .caixa {
+  height: 210.2px;
+  width: 200%;
+}
+
+#voltar #botao {
   border: 2px solid black;
   border-radius: 5px;
   color: red;
