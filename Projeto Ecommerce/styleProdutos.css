@@ -56,10 +56,10 @@
   padding: 0.5rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 811px) {
   .botaoVoltar {
     position: static;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
   }
 
   .products-grid {

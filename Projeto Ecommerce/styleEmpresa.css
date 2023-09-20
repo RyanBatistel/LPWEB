@@ -67,3 +67,10 @@
     margin-top: auto;
     color: rgba(0, 0, 0);
 }
+
+@media (max-width: 811px) {
+    .botaoVoltar {
+      position: static;
+      margin-top: 4rem;
+    }
+}
