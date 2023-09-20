@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="pagina" lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maxium-scale=1.0">
+    <link rel="stylesheet" href="styleContato.css">
+    <script src="script/botaoVoltar.js" type="text/javascript"></script>
+    <title>Fale Conosco</title>
+</head>
+
+<body class="corpo">
+    <header class="cabecalho">
+        <h1>Fale Conosco</h1>
+        <img class="botaoVoltar" src="imagens/logoP.png" alt="logo" onclick="goBack()">
+    </header>
+
+    <div class="formulario">
+        <form action="enviarEmail.php" method="post">
+            <label class="informacao" for="nome">Nome:</label>
+            <input class="caixaTexto" type="text" name="nome" required>
+
+            <label class="informacao" for="email">E-mail:</label>
+            <input class="caixaTexto" type="email" name="email" required>
+
+            <label class="informacao" for="telefone">Telefone:</label>
+            <input class="caixaTexto" type="tel" name="telefone" required>
+
+            <label class="informacao" for="mensagem">Mensagem:</label>
+            <textarea class="mensagem" rows="4" cols="50" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer class="rodape">
+        <p>&copy; 2023 MicroMagic Shop. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
