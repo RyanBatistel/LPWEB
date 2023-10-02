@@ -18,8 +18,7 @@
   position: relative;
 }
 
-.botaoVoltar {
-  color: white;
+.botaoVoltar {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
