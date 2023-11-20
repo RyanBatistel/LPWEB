@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="pagina" lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<!--user-scalable permite que o usuario possa diminuir e aumentar o zoom da pagina  -->
+	<meta name="viewport" content="width=device-width, user-scalable=1.0" >
+	<!-- Faz o direcionamento para a pagina CSS estiloContato -->
+	<link rel="stylesheet" href="css/estiloCadastro.css">
+	<title>Fale Conosco</title>
+</head>
+
+<body class="corpo">
+	<!-- Seção de Cabeçalho -->
+	<header class="cabecalho">
+		<!-- Título Principal da Página -->
+		<h1 class="titulo">Cadastrar ou Fazer Login</h1>
+		<!-- Links de Navegação -->
+		<a class="link" href="empresa.html"> Empresa</a>
+		<a class="link" href="produtos.html"> Produtos</a>
+		<a class="link" href="contato.html"> Contato</a>
+		<!-- Link para a Página Inicial com o Logotipo -->
+		<a href="principal.html"><img class="botaoVoltar" src="../img/logo.png" alt="logo"></a>
+	</header>
+    
+    <div class="formulario">
+		<form action="create_cliente.php" method="post" name="add">
+			<p>Nome Cliente</p>
+			<input type="text" name="nome_cliente">
+			
+			<p>Data de Nascimento</p>
+			<input type="date" name="data_nascimento">
+	
+			<p>Data de Cadastro</p>
+			<input type="date" name="data_cadastro">
+	
+			<p>Cpf ou Cnpj</p>
+			<input type="text" name="cpf_cnpj">
+	
+			<p>Gênero</p>
+				<select name="genero">
+				<option value="Masculino">Masculino</option>
+				<option value="Feminino">Feminino</option>
+				<option value="Outro">Outro</option>
+				</select>
+			<input type="submit" name="submit" value="Adicionar">
+		</form>
+        </div>
+	<!-- Seção de Rodapé -->
+	<footer class="rodape">
+		<!-- Aviso de Direitos Autorais -->
+		<p>&copy; 2023 MicroMagic Shop. Todos os direitos reservados.</p>
+	</footer>
+</body>
+
+</html>
