@@ -27,6 +27,6 @@ $result = mysqli_query($conn, "SELECT * FROM cliente");
       }   
       ?>
     </table>
-    <a href="read_cliente.php">Voltar à tela anterior</a>
+    <a href="view/principal.html">Voltar à tela anterior</a>
   </body>
 </html>

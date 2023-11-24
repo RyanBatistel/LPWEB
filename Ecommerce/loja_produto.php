@@ -1,10 +1,10 @@
 <?php
-require_once("mysqli_conexao.php");
+require_once("../mysqli_conexao.php");
 require_once("Produto.php");
 $area = isset($_GET['area']) ? $_GET['area'] : NULL;
 $acao = isset($_GET['acao']) ? $_GET['acao'] : NULL;
 
-//$produto = new Produto();
+$produto = new Produto();
 
 if ($area == "produtos") {
   switch ($acao) {

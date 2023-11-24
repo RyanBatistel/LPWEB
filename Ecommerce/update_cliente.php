@@ -34,7 +34,7 @@ if(isset($_POST['update'])){
         cidade='$cidade', bairro='$bairo', estado='$estado', numero='$numero' 
         WHERE id_cliente=$id");
 
-        echo "<font color='green'>Cliente atualizado\n";
+        echo "<font color='green'>Cliente atualizado<br>"; 
     }
     echo "<a href='read_cliente.php'>Voltar para a lista de clientes";
 }
