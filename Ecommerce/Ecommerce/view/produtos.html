@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="pagina" lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<!--user-scalable permite que o usuario possa diminuir e aumentar o zoom da pagina  -->
+	<meta name="viewport" content="width=device-width, user-scalable=1.0" >
+	<!-- Faz o direcionameto para a pagina CSS estiloProdutos  -->
+	<link rel="stylesheet" href="css/estiloProdutos.css">
+	<title>Produtos da MicroMagic</title>
+</head>
+
+<body class="corpo">
+	<!-- Cabeçalho da página -->
+	<header class="cabecalho">
+		<h1 class="titulo">Produtos da MicroMagic</h1>
+		<!-- Links de navegação -->
+		<a class="link" href="empresa.html"> Empresa</a>
+		<a class="link" href="contato.html"> Contato</a>
+		<a class="link" href="..\read_produto.php"> Atualizar/Remover</a>
+		<a class="link" href="login.html"> Login</a>
+		<!-- Botão de voltar com o logotipo -->
+		<a href="principal.html"><img class="botaoVoltar" src="../img/logo.png" alt="logo"></a>
+	</header>
+
+	<!-- Seção de produtos -->
+	<div class="cart">
+        <h2>Carrinho</h2>
+        <ul id="cart-list">
+            <?php include 'read_cart.php'; ?>
+        </ul>
+        <p>Total do Carrinho: R$<span id="cart-total"><?php include 'total_cart.php'; ?></span></p>
+	<section class="produtosGrid">
+		<!-- Produto 1 -->
+		<div class="produtos">
+			<input type="hidden" name="product_id" value="1">
+            <input type="hidden" name="product_name" value="Microondas Embutir Song 33 Litros Crissair">
+            <input type="hidden" name="product_price" value="99.99">
+			<li lidata-id="1" data-nome="Microondas Embutir Song 33 Litros Crissair" data-preco="99,99">
+			<img class="imagem" src="../img\micro2.png" alt="Produto 1">
+			<h2>Microondas Embutir Song 33 Litros Crissair</h2>
+			<p class="preco">R$99,99</p>
+			<button class="add-to-cart" type="submit">Adicionar ao Carrinho</button>
+		</div>
+
+		<!-- Produto 2 -->
+		<div class="produtos">
+			<input type="hidden" name="product_id" value="2">
+            <input type="hidden" name="product_name" value="Micro-ondas Continental Prata 34 Litros (MC34S)">
+            <input type="hidden" name="product_price" value="149.99">
+			<img class="imagem" src="../img\micro3.png" alt="Produto 2">
+			<h2>Micro-ondas Continental Prata 34 Litros (MC34S)</h2>
+			<p class="preco">R$149,99</p>
+			<button class="add-to-cart" type="submit">Adicionar ao Carrinho</button>
+		</div>
+
+		<!-- Produto 3 -->
+		<div class="produtos">
+			<input type="hidden" name="product_id" value="3">
+            <input type="hidden" name="product_name" value="Forno Micro-ondas LG MS3097AR 30 Litros">
+            <input type="hidden" name="product_price" value="199.99">
+			<img class="imagem" src="../img\micro1.png" alt="Produto 3">
+			<h2>Forno Micro-ondas LG MS3097AR 30 Litros</h2>
+			<p class="preco">R$199,99</p>
+			<button class="add-to-cart" type="submit">Adicionar ao Carrinho</button>
+		</div>
+	</section>
+	<form action="../checkout_cart.php" method="post">
+		<button type="submit">Finalizar Compra</button>
+	</form>
+	
+	<!-- Rodapé da página -->
+	<footer class="rodape">
+		<p>&copy; 2023 MicroMagic. Todos os direitos reservados.</p>
+	</footer>
+</body>
+
+</html>
