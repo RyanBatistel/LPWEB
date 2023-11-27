@@ -75,15 +75,14 @@
 }
 
 .add-to-cart {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
+    background-color: #4CAF50; /*Define a cor de fundo */
+    color: white; /*Altera a cor para branco*/
+    border: none; /*Remove a borda*/
+    padding: 5px 10px; /*Define o alinamento e espaçamento*/
+    text-align: center; /*Alinha o texto centralizado*/
+    text-decoration: none; /*Remove o Hiperlink do texto*/
+    font-size: 12px; /*Define o tamanho da fonte*/
+    cursor: pointer; /*A passar o mouse em cima do botão mostra que interativo */
 }
 
 /* Estilos para o rodapé da página */
