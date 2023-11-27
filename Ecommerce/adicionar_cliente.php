@@ -8,40 +8,40 @@
    
     <form action="create_cliente.php" method="post" name="add">
         <p>Nome Cliente</p>
-        <input type="text" name="nome_cliente">
+        <input type="text" name="nome_cliente" autocomplete="off">
         
         <p>Data de Nascimento</p>
-        <input type="date" name="data_nascimento">
+        <input type="date" name="data_nascimento" autocomplete="off">
 
         <p>Data de Cadastro</p>
-        <input type="date" name="data_cadastro">
+        <input type="date" name="data_cadastro" autocomplete="off">
 
         <p>Cpf ou Cnpj</p>
-        <input type="text" name="cpf_cnpj">
+        <input type="text" name="cpf_cnpj" autocomplete="off">
 
         <p>Gênero</p>
-            <select name="genero">
+            <select name="genero" autocomplete="off">
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
             </select>
 
         <p>Email</p>
-        <input type="text" name="email_cliente">
+        <input type="text" name="email_cliente" autocomplete="off">
 
         <p>Telefone</p>
-        <input type="text" name="numero_cliente">
+        <input type="text" name="numero_cliente" autocomplete="off">
 
         <p>CEP</p>
-        <input type="text" name="cep">
+        <input type="text" name="cep" autocomplete="off">
 
         <p>Logradouro</p>
-        <input type="text" name="dt_logradouro">
+        <input type="text" name="dt_logradouro" autocomplete="off">
 
         <p>Cidade</p>
-        <input type="text" name="cidade">
+        <input type="text" name="cidade" autocomplete="off">
 
         <p>Bairro</p>
-        <input type="text" name="bairo">
+        <input type="text" name="bairo" autocomplete="off">
 
         <p>Estado</p>
         <!-- <input type="text" name="estado"> -->
@@ -75,12 +75,8 @@
           <option value="SE">Sergipe</option>
           <option value="TO">Tocantins</option>
         </select>
-
-
         <p>Numero Casa/Apartamento</p>
-        <input type="text" name="numero">
-
-
+        <input type="text" name="numero" autocomplete="off">
         <input type="submit" name="submit" value="Adicionar">
 </form>
     <a href="read_cliente.php">Voltar à tela anterior</a>

@@ -101,7 +101,7 @@ $numero = $resultData_d['numero'];
             </select><br>
             <p>Numero</p>
             <input type="text" name="numero" value="<?php echo $numero; ?>"> <br>
-            <input type="hidden" name="id_cliente" value="<?php echo $id; ?>">
+            <input type="hidden" name="id_cliente" value="<?php echo $id; ?>"> <br>
             <input type="submit" name="update" value="Atualizar">
         </form>
     </body>
