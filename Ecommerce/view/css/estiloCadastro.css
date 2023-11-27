@@ -15,22 +15,38 @@
 	min-height: 100vh; /* Define uma altura mínima igual à altura da tela */
 }
 
-/* Estilos para o cabeçalho da página */
+/* Estilos para o cabeçalho */
 .cabecalho {
 	background-color: #f4f4f4; /* Define a cor de fundo do cabeçalho */
 	color: rgb(0, 0, 0); /* Define a cor do texto */
-	text-align: center; /* Centraliza o texto */
-	padding: 1.4rem 0; /* Adiciona espaço de preenchimento superior e inferior */
-	position: relative; /* Define a posição relativa para posicionamento de elementos filhos */
+	text-align: center; /* Centraliza o texto no cabeçalho */
+	padding: 40px 0; /* Define preenchimento superior e inferior */
+	position: relative; /* Define a posição relativa para permitir posicionamento absoluto de elementos filhos */
 }
 
-/* Estilos para links de navegação */
+/* Estilos para os links de navegação no cabeçalho */
 .link {
-	
-	color: rgb(245, 143, 19); /* Define a cor do link */
+	color: rgb(245, 143, 19); /* Define a cor dos links */
 	text-decoration: none; /* Remove a decoração de texto (sublinhado) */
-	font-weight: bold; /* Define a espessura da fonte como negrito */
-	padding: 10px; /* Adiciona espaço de preenchimento aos links */
+	font-weight: bold; /* Define o peso da fonte como negrito */
+	padding: 10px; /* Define o espaçamento interno dos links */
+	margin-left: 100px; /* Define a margem direita entre os links */
+}
+
+/* Estilos para o botão de voltar com o logotipo */
+.botaoVoltar {
+	border: none; /* Remove a borda do botão */
+	cursor: pointer; /* Altera o cursor para indicar interatividade */
+	position: absolute; /* Define a posição absoluta para permitir posicionamento absoluto */
+	top: 60%; /* Alinha o topo do botão no centro vertical */
+	left: 1rem; /* Define a posição à esquerda */
+	transform: translateY(-50%); /* Centraliza verticalmente usando uma transformação */
+}
+
+/* Estilos para o título principal*/
+.tituloPrincipal {
+	padding: 2px; /* Define o espaçamento interno do título */
+	text-align: center; /* Centraliza o texto no cabeçalho */
 }
 
 /* Estilos para o título principal */
@@ -38,26 +54,36 @@
 	padding: 2px; /* Adiciona espaço de preenchimento ao título */
 }
 
-/* Estilos para o botão de voltar */
-.botaoVoltar {
-	border: none; /* Remove a borda do botão */
-	padding: 0.5rem 1rem; /* Adiciona espaço de preenchimento ao botão */
-	cursor: pointer; /* Define o cursor como ponteiro (mãozinha) */
-	position: absolute; /* Define posição absoluta para posicionamento */
-	top: 50%; /* Alinha o botão verticalmente no meio */
-	left: 1rem; /* Define uma margem à esquerda */
-	transform: translateY(-50%); /* Centraliza verticalmente usando uma transformação */
-}
-
 /* Estilos para o formulário de contato */
-.formulario {
-	width: 100%; /* Define a largura máxima do formulário */
+.formulario{
+    width: 100%; /* Define a largura máxima do formulário */
 	max-width: 400px; /* Define a largura máxima do formulário */
 	background-color: #fff; /* Define a cor de fundo do formulário */
-	padding: 20px; /* Adiciona espaço de preenchimento interno ao formulário */
+	padding: 15px; /* Adiciona espaço de preenchimento interno ao formulário */
 	border-radius: 5px; /* Define uma borda arredondada para o formulário */
 	box-shadow: 0px 0px 5px 0px #ccc; /* Adiciona uma sombra sutil ao formulário */
-	margin: 20px auto; /* Centraliza o formulário horizontalmente */
+	margin: 100px auto; /* Centraliza o formulário horizontalmente */
+    position: relative; /* Define a posição absoluta para permitir posicionamento absoluto */
+	display: grid; /* Usa um layout de grade para organizar os elementos */
+	grid-template-columns: repeat(auto-fit, minmax(357px, -2fr)); /* Cria colunas flexíveis */
+	gap: 1.2rem; /* Define o espaçamento entre as colunas e linhas da grade */
+	padding: 0.5rem; /* Adiciona espaço de preenchimento à grade */
+	align-content: center;
+    justify-content: center;
+    align-items: start;
+    justify-items: stretch;  
+}
+
+.caixaTexto {
+	width: 100%; /* Define a largura dos campos de entrada */
+	padding: 8px; /* Adiciona espaço de preenchimento interno aos campos */
+	margin-bottom: 10px; /* Adiciona espaço abaixo dos campos */
+	border: 1px solid #ccc; /* Define uma borda com cor cinza */
+	border-radius: 3px; /* Define uma borda arredondada para os campos */
+	margin-top: 5px;
+}
+.texto{
+	padding: 10px 0;
 }
 
 /* Estilos para indicar campos obrigatórios */
@@ -71,18 +97,13 @@
 	margin-bottom: 5px; /* Adiciona espaço abaixo dos rótulos */
 }
 
-/* Estilos para campos de entrada de texto e área de mensagem */
-.caixaTexto,
+/* Estilos para área de mensagem */
 .mensagem {
 	width: 95%; /* Define a largura dos campos de entrada */
 	padding: 8px; /* Adiciona espaço de preenchimento interno aos campos */
 	margin-bottom: 10px; /* Adiciona espaço abaixo dos campos */
 	border: 1px solid #ccc; /* Define uma borda com cor cinza */
 	border-radius: 3px; /* Define uma borda arredondada para os campos */
-}
-
-/* Estilos específicos para a área de mensagem */
-.mensagem {
 	height: 100px; /* Define uma altura fixa para a área de mensagem */
 }
 
@@ -95,7 +116,7 @@
 }
 
 /* Estilos para dispositivos com largura máxima de 811px */
-@media (max-width: 811px) {
+@media (max-width: 768px) {
 
 	/* Estilos para o botão de voltar em dispositivos pequenos */
 	.botaoVoltar {
@@ -108,5 +129,21 @@
 	/* Estilos de layout alterados para o formulário em dispositivos pequenos */
 	.formulario {
 		padding: 15px; /* Reduz o espaço de preenchimento interno do formulário */
+	}
+
+	/* Alterações para a seção de cabeçalho em telas pequenas */
+	.cabecalho {
+		flex-direction: column; /* Altera a direção dos elementos para empilhamento vertical */
+		text-align: center; /* Centraliza o texto no cabeçalho */
+	}
+
+	/* Ajusta a margem dos links de navegação em telas pequenas */
+	.link {
+		margin: 10px 0; /* Reduz a margem vertical entre os links */
+	}
+
+	/* Ajusta o rodapé em telas pequenas */
+	.rodape {
+		position: relative; /* Remove a posição fixa para o rodapé */
 	}
 }

@@ -20,7 +20,7 @@
 	background-color: #f4f4f4; /* Define a cor de fundo do cabeçalho */
 	color: rgb(0, 0, 0); /* Define a cor do texto */
 	text-align: center; /* Centraliza o texto no cabeçalho */
-	padding: 1.4rem 0; /* Define preenchimento superior e inferior */
+	padding: 40px 0; /* Define preenchimento superior e inferior */
 	position: relative; /* Define a posição relativa para permitir posicionamento absoluto de elementos filhos */
 }
 
@@ -30,15 +30,15 @@
 	text-decoration: none; /* Remove a decoração de texto (sublinhado) */
 	font-weight: bold; /* Define o peso da fonte como negrito */
 	padding: 10px; /* Define o espaçamento interno dos links */
+	margin-left: 100px; /* Define a margem direita entre os links */
 }
 
 /* Estilos para o botão de voltar com o logotipo */
 .botaoVoltar {
 	border: none; /* Remove a borda do botão */
-	padding: 0.5rem 1rem; /* Define o espaçamento interno do botão */
 	cursor: pointer; /* Altera o cursor para indicar interatividade */
 	position: absolute; /* Define a posição absoluta para permitir posicionamento absoluto */
-	top: 50%; /* Alinha o topo do botão no centro vertical */
+	top: 60%; /* Alinha o topo do botão no centro vertical */
 	left: 1rem; /* Define a posição à esquerda */
 	transform: translateY(-50%); /* Centraliza verticalmente usando uma transformação */
 }
@@ -46,8 +46,27 @@
 /* Estilos para o corpo principal de texto */
 .corpoTexto {
 	display: grid; /* Usa um layout de grade para organizar os elementos */
-	gap: 1rem; /* Define o espaçamento entre as colunas e linhas da grade */
+	gap: 10px; /* Define o espaçamento entre as colunas e linhas da grade */
 	padding: 0.5rem; /* Adiciona espaço de preenchimento à seção */
+}
+
+/* Estilos para o nome da empresa */
+.nomeEmpresa {
+	font-size: 50px; /* Define o tamanho da fonte */
+	margin: 25px 25px; /* Define a margem ao redor do texto */
+	color: rgb(0, 0, 0); /* Define a cor do texto */
+}
+
+/* Estilos para a parte "Shop" do nome da empresa */
+.shop {
+	color: rgb(245, 143, 19); /* Define a cor específica para "Shop" */
+}
+
+/* Estilos para a descrição da empresa */
+.sobre {
+	font-size: larger; /* Define o tamanho da fonte como "larger" */
+	margin: 20px 50px; /* Define a margem ao redor do texto */
+	color: rgb(0, 0, 0); /* Define a cor do texto */
 }
 
 /* Estilos para as seções de Missão, Visão e Valores */
@@ -63,6 +82,12 @@
 	margin: 0 10px; /* Define a margem horizontal entre as seções */
 }
 
+/* Estilos para o título principal*/
+.tituloPrincipal {
+	padding: 2px; /* Define o espaçamento interno do título */
+	text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
 /* Estilos para os títulos das seções (Missão, Visão, Valores) */
 .titulo {
 	padding: 2px; /* Define o espaçamento interno do título */
@@ -72,6 +97,7 @@
 .descricao {
 	font-size: 18px; /* Define o tamanho da fonte */
 	color: #666; /* Define a cor do texto */
+	margin: 0 20px; /* Define a margem horizontal entre as seções */
 }
 
 /* Estilos para o rodapé da página */
@@ -84,7 +110,7 @@
 
 /* Estilos para telas com largura máxima de 811px */
 
-@media (max-width: 811px) {
+@media (max-width: 768px) {
 	/* Ajustes para o botão de voltar em telas pequenas */
 	.botaoVoltar {
 		position: static; /* Remove a posição absoluta para o botão */
@@ -108,5 +134,21 @@
 	/* Ajustes para a descrição nas seções em telas pequenas */
 	.descricao {
 		font-size: 16px; /* Define o tamanho da fonte */
+	}
+
+	/* Alterações para a seção de cabeçalho em telas pequenas */
+	.cabecalho {
+		flex-direction: column; /* Altera a direção dos elementos para empilhamento vertical */
+		text-align: center; /* Centraliza o texto no cabeçalho */
+	}
+
+	/* Ajusta a margem dos links de navegação em telas pequenas */
+	.link {
+		margin: 10px 0; /* Reduz a margem vertical entre os links */
+	}
+
+	/* Ajusta o rodapé em telas pequenas */
+	.rodape {
+		position: relative; /* Remove a posição fixa para o rodapé */
 	}
 }

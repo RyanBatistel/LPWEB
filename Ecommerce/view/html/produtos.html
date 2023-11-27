@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="pagina" lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<!--user-scalable permite que o usuario possa diminuir e aumentar o zoom da pagina  -->
+	<meta name="viewport" content="width=device-width, user-scalable=1.0" >
+	<!-- Faz o direcionameto para a pagina CSS estiloProdutos  -->
+	<link rel="stylesheet" href="../css/estiloProdutos.css">
+	<title>Produtos</title>
+</head>
+
+<body class="corpo">
+	<!-- Cabeçalho da página -->
+	<header class="cabecalho">
+		<!-- Links de navegação -->
+		<a class="link" href="empresa.html"> Empresa</a>
+		<a class="link" href="produtos.html"> Produtos</a>
+		<a class="link" href="contato.html"> Contato</a>
+		<a class="link" href="login.html"> Login</a>
+		<!-- Botão de voltar com o logotipo -->
+		<a href="index.html"><img class="botaoVoltar" src="../img/logo.png" alt="logo"></a>
+	</header>
+
+	<h1 class="tituloPrincipal">Nossos produtos</h1>
+	<!-- Seção de produtos -->
+	<section class="produtosGrid">
+		<!-- Produto 1 -->
+		<div class="produtos">
+			<img class="imagem" src="../img/micro2.png" alt="Produto 1">
+			<h2>Microondas Embutir Song 33 Litros Crissair</h2>
+			<p class="preco">R$99,99</p>
+			<button onclick="editProduct('produto3')">Editar</button>
+            <button onclick="removeProduct('produto3')">Remover</button>
+		</div>
+
+		<!-- Produto 2 -->
+		<div class="produtos">
+			<img class="imagem" src="../img/micro3.png" alt="Produto 2">
+			<h2>Micro-ondas Continental Prata 34 Litros (MC34S)</h2>
+			<p class="preco">R$149,99</p>
+			<button onclick="editProduct('produto3')">Editar</button>
+            <button onclick="removeProduct('produto3')">Remover</button>
+		</div>
+
+		<!-- Produto 3 -->
+		<div class="produtos">
+			<img class="imagem" src="../img/micro1.png" alt="Produto 3">
+			<h2>Forno Micro-ondas LG MS3097AR | 30 Litros - Fujioka</h2>
+			<p class="preco">R$199,99</p>
+			<button onclick="editProduct('produto3')">Editar</button>
+            <button onclick="removeProduct('produto3')">Remover</button>
+		</div>
+
+		<div class="produtos" id="addProduct">
+            <button onclick="addProduct()">Adicionar Produto</button>
+        </div>
+	</section>
+	<script src="../../controller/js/produtos.js"></script>
+	<!-- Rodapé da página -->
+	<footer class="rodape">
+		<p>&copy; 2023 MicroMagic. Todos os direitos reservados.</p>
+	</footer>
+</body>
+
+</html>
