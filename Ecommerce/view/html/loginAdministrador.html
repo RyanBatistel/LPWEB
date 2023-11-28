@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="pagina" lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<!--user-scalable permite que o usuario possa diminuir e aumentar o zoom da pagina  -->
+	<meta name="viewport" content="width=device-width, user-scalable=1.0" >
+	<!-- Faz o direcionamento para a pagina CSS estiloContato -->
+	<link rel="stylesheet" href="../css/estiloLoginAdm.css">
+	<title>Login-ADM</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login - Administrador</h2>
+        <form id="loginForm" action="../../model/php/loginAdm.php" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script src="../../controller/js/autentificacaoAdm.js"></script>
+</body>
+</html>

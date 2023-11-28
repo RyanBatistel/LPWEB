@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.cabecalho {
+    background-color: rgb(245, 143, 19);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.formulario {
+    flex: 1;
+    max-width: 400px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    overflow: auto; /* Adiciona barra de rolagem caso o conteúdo exceda as dimensões máximas */
+}
+
+.formulario h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 150px; /* Ajuste a altura conforme necessário */
+    resize: none; /* Impede o redimensionamento do textarea */
+}
+
+.formulario button {
+    background-color: rgb(245, 143, 19);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.formulario button:hover {
+    background-color: rgb(245, 143, 19);
+}
+
+.rodape {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Adicionando estilo para o menu */
+.menu {
+    background-color: rgb(245, 143, 19);
+    text-align: center;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Adicionando estilo para os botões */
+.botao-editar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.botao-editar img {
+    max-width: 20px;
+}
+
+botoes-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.botao-editar,
+.botoes-confirmar-cancelar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Ajuste o espaçamento lateral conforme necessário */
+}
+
+.botao-confirmar,
+.botao-cancelar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Ajuste o espaçamento lateral conforme necessário */
+}
+
+.botao-confirmar img,
+.botao-cancelar img,
+.botao-editar img {
+    max-width: 20px;
+}

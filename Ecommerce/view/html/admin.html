@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=1.0">
+    <link rel="stylesheet" href="../css/estiloAdmin.css">
+    <title>Página do Administrador</title>
+    <script>
+        var base_url = "http://localhost/LPWEB/Ecommerce/";
+    </script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Bem-vindo, Administrador!</h1>
+    </header>
+
+    <!-- Adicionando o menu -->
+    <nav class="menu">
+        <ul>
+            <a class="link" href="http://localhost/LPWEB/Ecommerce/view/html/index.html"> Home</a>
+            <li><a href="javascript:void(0);" onclick="mostrarFormulario('editarEmpresa')">Empresa</a></li>
+            <a class="link" href="http://localhost/LPWEB/Ecommerce/model/php/readCliente.php">Clientes</a>
+            <a class="link" href="http://localhost/LPWEB/Ecommerce/model/php/readProduto.php">Produtos</a>
+        </ul>
+    </nav>
+
+    <section class="conteudo">
+        <!-- Formulário para editar informações na página de index -->
+        <div id="editarIndex" class="formulario">
+            <h2>
+                Página Home
+                <!-- Adicionei botões Confirmar e Cancelar com ícones -->
+                <div class="botoes-confirmar-cancelar">
+                    <button type="button" class="botao-confirmar" onclick="confirmarEdicao('editarIndex')">
+                        <img src="../img/confirmar.png" alt="Confirmar">
+                    </button>
+                    <button type="button" class="botao-cancelar" onclick="cancelarEdicao('editarIndex')">
+                        <img src="../img/cancelar.png" alt="Cancelar">
+                    </button>
+                </div>
+                <button class="botao-editar" data-formulario="editarIndex" onclick="habilitarEdicao('editarIndex')">
+                    <img src="../img/editar.png" alt="Editar">
+                </button>
+            </h2>
+            <form action="../model/php/editarPaginaIndex.php" method="post">
+                <!-- Campos para editar informações -->
+                <label for="tituloIndex">Título:</label>
+                <input type="text" id="tituloIndex" name="tituloIndex" required>
+
+                <label for="descricaoIndex">Descrição:</label>
+                <textarea id="descricaoIndex" name="descricaoIndex" required></textarea>
+            </form>
+        </div>
+
+        <!-- Formulário para editar informações na página da empresa -->
+        <div id="editarEmpresa" class="formulario" style="display: none;">
+            <h2>
+                Página Empresa
+                <!-- Adicionei botões Confirmar e Cancelar com ícones -->
+                <div class="botoes-confirmar-cancelar">
+                    <button type="button" class="botao-confirmar" onclick="confirmarEdicao('editarEmpresa')">
+                        <img src="../img/confirmar.png" alt="Confirmar">
+                    </button>
+                    <button type="button" class="botao-cancelar" onclick="cancelarEdicao('editarEmpresa')">
+                        <img src="../img/cancelar.png" alt="Cancelar">
+                    </button>
+                </div>
+                <button class="botao-editar" data-formulario="editarEmpresa" onclick="habilitarEdicao('editarEmpresa')">
+                    <img src="../img/editar.png" alt="Editar">
+                </button>
+            </h2>
+            <form id="formEditarEmpresa" action="../../model/php/editarPaginaEmpresa.php" method="post">
+                <!-- Campos para editar informações -->
+                <label for="sobre">Sobre:</label>
+                <textarea id="sobre" name="sobre" required readonly></textarea>
+        
+                <label for="missao">Missão:</label>
+                <textarea id="missao" name="missao" required readonly></textarea>
+        
+                <label for="visao">Visão:</label>
+                <textarea id="visao" name="visao" required readonly></textarea>
+        
+                <label for="valores">Valores:</label>
+                <textarea id="valores" name="valores" required readonly></textarea>
+            </form>
+        </div>
+        
+
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2023 MicroMagic. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../../controller/js/admin.js"></script>
+</body>
+
+</html>

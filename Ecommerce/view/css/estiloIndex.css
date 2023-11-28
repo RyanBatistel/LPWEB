@@ -1,0 +1,166 @@
+/* Define estilos para todos os elementos na página */
+* {
+	margin: 0; /* Remove margens padrão */
+	box-sizing: border-box; /* Garante que as bordas e preenchimentos não afetem as dimensões dos elementos */
+	font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define a família de fontes padrão */
+}
+
+/* Estilos para o corpo da página */
+.corpo {
+	font-family: Arial, sans-serif; /* Define uma fonte alternativa para o corpo da página */
+	margin: 0; /* Remove margens */
+	padding: 0; /* Remove preenchimento */
+	display: flex; /* Usa um layout flexível para organizar os elementos horizontalmente */
+	flex-direction: column; /* Define a direção da coluna para empilhar elementos verticalmente */
+	min-height: 100vh; /* Define uma altura mínima igual à altura da tela */
+}
+
+/* Estilos para o cabeçalho */
+.cabecalho {
+	background-color: #f4f4f4; /* Define a cor de fundo do cabeçalho */
+	color: rgb(0, 0, 0); /* Define a cor do texto */
+	text-align: center; /* Centraliza o texto no cabeçalho */
+	padding: 40px 0; /* Define preenchimento superior e inferior */
+	position: relative; /* Define a posição relativa para permitir posicionamento absoluto de elementos filhos */
+}
+
+/* Estilos para os links de navegação no cabeçalho */
+.link {
+	color: rgb(245, 143, 19); /* Define a cor dos links */
+	text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+	font-weight: bold; /* Define o peso da fonte como negrito */
+	padding: 10px; /* Define o espaçamento interno dos links */
+	margin-left: 100px; /* Define a margem direita entre os links */
+}
+
+/* Estilos para o botão de voltar com o logotipo */
+.botaoVoltar {
+	border: none; /* Remove a borda do botão */
+	cursor: pointer; /* Altera o cursor para indicar interatividade */
+	position: absolute; /* Define a posição absoluta para permitir posicionamento absoluto */
+	top: 60%; /* Alinha o topo do botão no centro vertical */
+	left: 1rem; /* Define a posição à esquerda */
+	transform: translateY(-50%); /* Centraliza verticalmente usando uma transformação */
+}
+
+/* Estilos para o círculo no canto inferior direito */
+.circulo {
+	width: 300px; /* Define a largura */
+	height: 300px; /* Define a altura */
+	border-radius: 300px 0 0 0; /* Define um canto superior direito circular */
+	background-color: rgb(245, 143, 19); /* Define a cor de fundo */
+	position: fixed; /* Mantém o elemento fixo na tela */
+	bottom: 0; /* Alinha na parte inferior */
+	right: 0; /* Alinha na parte direita */
+	top: 60%; /* Define a distância do topo */
+}
+
+/* Estilos para a seção "Sobre" */
+.sobre {
+	display: grid; /* Usa um layout de grade para organizar os elementos */
+	grid-template-columns: 1fr 1fr; /* Divide a grade em duas colunas de largura igual */
+	gap: 1rem; /* Define o espaçamento entre as colunas e linhas da grade */
+	padding: 0.5rem; /* Adiciona espaço de preenchimento à seção */
+}
+
+/* Estilos para o nome da empresa */
+.nomeEmpresa {
+	font-size: 50px; /* Define o tamanho da fonte */
+	margin: 150px 25px 25px 25px; /* Define a margem ao redor do texto */
+	color: rgb(0, 0, 0); /* Define a cor do texto */
+}
+
+/* Estilos para a parte "Shop" do nome da empresa */
+.shop {
+	color: rgb(245, 143, 19); /* Define a cor específica para "Shop" */
+}
+
+/* Estilos para a imagem relacionada à empresa */
+.img {
+	position: relative; /* Define a posição relativa para permitir ajustes de posicionamento */
+	top: 70%; /* Define a distância do topo */
+	width: 100%; /* Define a largura da imagem */
+	padding: 0px 0; /* Define o espaçamento interno da imagem */
+}
+
+/* Estilos para os ícones de redes sociais */
+.imgRedesSociais {
+    position: absolute; /* Define posição absoluta para posicionamento preciso */
+    top: 85%; /* Define a distância do topo */
+    right: 3%; /* Define a distância da direita */
+    transform: translateY(-50%); /* Centraliza verticalmente usando uma transformação */
+}
+
+/* Adiciona espaçamento entre os ícones usando a propriedade margin */
+.imgRedesSociais img {
+    display: block; /* Define como bloco para permitir o posicionamento */
+}
+
+/* Estilos para a descrição da empresa */
+.descricao {
+	font-size: larger; /* Define o tamanho da fonte como "larger" */
+	margin: 20px 50px; /* Define a margem ao redor do texto */
+	color: rgb(0, 0, 0); /* Define a cor do texto */
+}
+
+/* Estilos para o rodapé */
+.rodape {
+	text-align: center; /* Centraliza o texto no rodapé */
+	position: fixed; /* Mantém o rodapé fixo na parte inferior da tela */
+	bottom: 0; /* Alinha na parte inferior */
+	left: 0; /* Alinha à esquerda */
+	width: 100%; /* Define a largura total do rodapé */
+	padding: 1rem; /* Adiciona espaço de preenchimento ao rodapé */
+}
+
+/* Estilos para telas com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+	/* Alterações para a seção de cabeçalho em telas pequenas */
+	.cabecalho {
+		flex-direction: column; /* Altera a direção dos elementos para empilhamento vertical */
+		text-align: center; /* Centraliza o texto no cabeçalho */
+	}
+
+	/* Estilos para o botão de voltar em dispositivos pequenos */
+	.botaoVoltar {
+		position: static; /* Remove a posição absoluta para o botão */
+		margin: 0 auto; /* Centraliza horizontalmente usando margin:auto */
+		display: block; /*  O elemento block ocupa 100% da largura disponível e para ele é sempre iniciado em uma nova linha. */
+		margin-top: 8rem; /* Define a margem superior */
+	}
+
+	/* Oculta o círculo em telas pequenas */
+	.circulo {
+		display: none; /* Esconde o círculo */
+	}
+
+	/* Ajusta a margem dos links de navegação em telas pequenas */
+	.link {
+		margin: 10px 0; /* Reduz a margem vertical entre os links */
+	}
+
+	/* Alterações para a seção "Sobre" em telas pequenas */
+	.sobre {
+		grid-template-columns: 1fr; /* Define uma única coluna */
+	}
+
+	/* Ajusta o tamanho do nome da empresa em telas pequenas */
+	.nomeEmpresa {
+		font-size: 40px; /* Reduz o tamanho da fonte */
+	}
+
+	/* Oculta os ícones de redes sociais em telas pequenas */
+	.imgRedesSociais {
+		display: none; /* Esconde os ícones de redes sociais */
+		right: 10%; /* Ajusta o posicionamento à direita */
+	}
+
+	/* Ajusta o rodapé em telas pequenas */
+	.rodape {
+		position: relative; /* Remove a posição fixa para o rodapé */
+	}
+
+	.img {
+		top: 20%; /* Define a distância do topo */
+	}
+}

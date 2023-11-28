@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="pagina" lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<!--user-scalable permite que o usuario possa diminuir e aumentar o zoom da pagina  -->
+	<meta name="viewport" content="width=device-width, user-scalable=1.0" >
+	<!-- Faz o direcionamento para a pagina CSS estiloContato -->
+	<link rel="stylesheet" href="../css/estiloLogin.css">
+	<title>Login</title>
+</head>
+
+<body class="corpo">
+	<!-- Cabeçalho da página -->
+	<header class="cabecalho">
+		<!-- Links de navegação -->
+		<a class="link" href="empresa.html"> Empresa</a>
+		<a class="link" href="produtos.html"> Produtos</a>
+		<a class="link" href="contato.html"> Contato</a>
+		<a class="link" href="login.html"> Login</a>
+		<!-- Botão de voltar com o logotipo -->
+		<a href="index.html"><img class="botaoVoltar" src="../img/logo.png" alt="logo"></a>
+	</header>
+    
+	
+	<section class="login">
+        <form class="formulario" action="login.php" method="POST">
+			<!-- Título Principal da Página -->
+			<h1 class="tituloPrincipal">Fazer Login</h1>
+            <!-- Área de Texto para o login -->
+			<div>
+				<label class="texto" for="email">E-mail:
+					<input class="caixaTexto" class="email" type="email" name="email" >
+				</label>
+				<!-- Área de Texto para a Senha -->
+				<label class="texto" for="password">Senha:
+					<input class="caixaTexto" type="password" class="senha" name="senha" >
+				</label>
+			</div>
+		<button class="enviar" type="submit">Acessar</button>
+		<a class="enviar" href="cadastro.html">Criar conta</a>
+        </form>
+    </section>
+
+	<!-- Seção de Rodapé -->
+	<footer class="rodape">
+		<!-- Aviso de Direitos Autorais -->
+		<p>&copy; 2023 MicroMagic Shop. Todos os direitos reservados.</p>
+	</footer>
+</body>
+
+</html>
